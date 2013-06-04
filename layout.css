@@ -1,0 +1,15 @@
+body {
+	color: #000;
+	text-decoration: none;
+}
+
+h1{
+	text-align:center;
+}
+
+#kochCanvas {
+	border:1px solid #000000; 
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
