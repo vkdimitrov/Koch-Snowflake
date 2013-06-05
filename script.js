@@ -76,6 +76,21 @@ function draw_vector(context, vector)
 	context.beginPath();
 	context.moveTo(vector.start.X, vector.start.Y);
 	context.lineTo(vector.end.X, vector.end.Y);
+	context.strokeStyle = '#000';
+	context.stroke();	
+}
+
+/*
+ * undraw_vector - delete given vector from the canvas 
+ * @param	{context} canvas context
+ * @param	{Vector}  vector 
+ */
+function undraw_vector(context, vector)
+{
+	context.beginPath();
+	context.moveTo(vector.start.X, vector.start.Y);
+	context.lineTo(vector.end.X, vector.end.Y);
+	context.strokeStyle = '#fff';
 	context.stroke();	
 }
 
@@ -166,6 +181,9 @@ window.onload = function()
 				motifLines.push(motif2);
 				motifLines.push(motif3);
 				motifLines.push(motif4);
+				//delete middle part 
+				var middle = new Vector(nextP2, nextP4);
+				undraw_vector(ctx, middle);
 			}
 			lines = motifLines;
 		}
