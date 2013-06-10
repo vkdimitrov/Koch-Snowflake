@@ -28,13 +28,13 @@ function Vector(pointFrom, pointTo)
 		var start = start; 
 		var end	  = end;
 		
-		if(start.X == end.X)
+		if(start.X === end.X)
 		{
 			if(end.Y > start.Y) ang += Math.PI/2;
 			if(end.Y < start.Y) ang += 3 * Math.PI/2;
 			return ang;
 		}
-		if(start.Y == end.Y)
+		if(start.Y === end.Y)
 		{
 			if(end.X > start.X) ang = 0;
 			if(end.X < start.X) ang += Math.PI;
@@ -110,7 +110,7 @@ window.onload = function()
 	
 	//iterations counter 
 	var counter = 0;
-	
+
 	//init base
 	var lines = new Array();
 	/*
@@ -135,10 +135,13 @@ window.onload = function()
 	var c = new Vector(tmpPoint3, tmpPoint);
 	lines.push(c);
 	
+	//length 
+	var length = 0;
+	
 	//drawing
 	canvas.addEventListener('click', 
 	function(){
-		if(counter != 0)
+		if(counter !== 0)
 		{
 			var motifLines = new Array();
 			for(i in lines)
@@ -191,6 +194,14 @@ window.onload = function()
 		{
 			draw_vector(ctx, lines[i]);
 		}
+		
 		counter++;
+		length *= 4/3;
+		
+		if(counter === 1) 
+			length = 3 * Math.abs(tmpPoint2.X - tmpPoint.X);
+		
+		document.getElementById('length').value = length;
+		document.getElementById('iterations').value = counter;
 	}, false);
-}
+};
