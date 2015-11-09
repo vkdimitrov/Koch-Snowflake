@@ -3,7 +3,7 @@ body {
 	text-decoration: none;
 }
 
-h1{
+h1 {
 	text-align:center;
 	margin-top: -10px;
 }
@@ -14,7 +14,8 @@ h1{
 	margin-right: auto;
 	display: block;
 }
-.hint{
+
+.hint {
 	width: 780px;
 	margin-left: auto;
 	margin-right: auto;
@@ -24,7 +25,8 @@ h1{
 /*	padding-top: 2px;
 	padding-bottom: 2px;*/
 }
-.info{
+
+.info {
 	width: 780px;
 	margin-left: auto;
 	margin-right: auto;
@@ -36,19 +38,19 @@ h1{
 }
 
 input {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border:1px solid #ccc;
-  width:80px;
-  -webkit-border-radius:5px;
-  -moz-border-radius:5px;
-  -o-border-radius:5px;
-  -ms-border-radius:5px;
-  border-radius:5px;
-  margin-bottom: 5px;
-  margin-left: 2px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	border:1px solid #ccc;
+	width:80px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	-ms-border-radius:5px;
+	border-radius:5px;
+	margin-bottom: 5px;
+	margin-left: 2px;
 }
-:disabled{
+
+:disabled {
 	background: #fff;
 	color: black;
 }
-
